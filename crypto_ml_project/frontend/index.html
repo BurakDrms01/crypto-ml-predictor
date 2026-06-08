@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Tahmin Botu 🤖</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+
+    <div class="container">
+
+        <!-- BAŞLIK -->
+        <header>
+            <div class="logo">
+                <span class="btc-icon">₿</span>
+            </div>
+            <h1>Bitcoin <span class="highlight">Tahmin</span> Botu</h1>
+            <p class="subtitle">XGBoost yapay zeka modeli ile anlık BTC sinyal analizi</p>
+        </header>
+
+        <!-- FİYAT KARTI -->
+        <div class="card price-card">
+            <p class="card-label">GÜNCEL BTC FİYATI</p>
+            <!-- JS bu id'yi bulup fiyatı buraya yazacak -->
+            <h2 id="price-display">— USDT</h2>
+        </div>
+
+        <!-- SİNYAL BUTONU -->
+        <button id="signal-btn" onclick="sinyalAl()">
+            <span id="btn-text">🔍 Sinyali Analiz Et</span>
+        </button>
+
+        <!-- SONUÇ KARTI (Başta gizli, sinyal gelince görünür) -->
+        <div class="card result-card" id="result-card">
+            <p class="card-label">MODEL KARARI</p>
+            <!-- JS bu id'yi bulup kararı buraya yazacak -->
+            <h2 id="signal-display">—</h2>
+            <p id="result-message"></p>
+        </div>
+
+        <footer>
+            <p>⚠️ Bu uygulama eğitim amaçlıdır. Finansal tavsiye değildir.</p>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript dosyamızı en sona bağlıyoruz -->
+    <script src="/static/script.js"></script>
+</body>
+</html>
